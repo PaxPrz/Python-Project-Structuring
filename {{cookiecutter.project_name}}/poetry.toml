@@ -1,0 +1,2 @@
+[virtualenvs]
+in-project = {% if cookiecutter.virtualenvs_in_project == 'y' %}true{% else %}false{% endif %}

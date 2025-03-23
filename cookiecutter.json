@@ -1,0 +1,13 @@
+{
+	"author_name": "Prakash Prajapati",
+	"author_email": "paxprajapati@gmail.com",
+	"project_name": "Python Project Structure",
+	"project_slug": "python_project_structure",
+	"version": "0.1.0",
+	"project_description": "Short Description on use of this project.",
+	"minimum_python_version": "3.10",
+	"virtualenvs_in_project": "y",
+	"requires_alembic": "n",
+	"requires_documentation": "n",
+	"add_example_code": "y"
+}

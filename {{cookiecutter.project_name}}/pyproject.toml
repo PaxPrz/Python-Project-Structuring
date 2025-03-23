@@ -1,0 +1,38 @@
+[project]
+name = "{{cookiecutter.project_slug}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.project_description}}"
+authors = [
+    {name = "{{cookiecutter.author_name}}",email = "{{cookiecutter.author_email}}"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry.dependencies]
+python = "^{{cookiecutter.minimum_python_version}}"
+python-dotenv = "^1.0.1"
+shortuuid = "^1.0.13"
+pydantic = "^2.10.6"
+sqlalchemy = "^2.0.0"
+boto3 = "^1.37.18"
+psycopg2-binary = "^2.9.10"
+asyncpg = "^0.30.0"
+{% if cookiecutter.requires_alembic != 'n' %}
+alembic = "^1.15.1"
+{% endif %}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pre-commit = "^4.2.0"
+ipdb = "^0.13.13"
+{% if cookiecutter.requires_documentation != 'n' %}
+mkdocs = "^1.6.1"
+mkdocstrings = {extras = ["python"], version = "^0.29.0"}
+mkdocs-material = "^9.6.9"
+{% endif %}
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
