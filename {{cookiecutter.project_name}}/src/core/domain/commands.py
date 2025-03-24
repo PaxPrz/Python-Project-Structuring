@@ -7,7 +7,7 @@ from pydantic import BaseModel as PydanticBaseModel
 from pydantic import fields, field_validator
 
 
-class BaseCommand(PydanticBaseModel):
+class BaseCommand(PydanticBaseModel, ABC):
     cmd_id: str = fields.Field(default_factory=uuid)
     actor: typing.Optional[m.UserId] = fields.Field(default=None)
 
